@@ -10,6 +10,10 @@
   https://github.com/EletroTRAC/laboratorio_16_reles-code.git
 --------------------------------------------------------- */
 
+/* Inicio */
+/* -------------------------------------------------------- */
+
+/* Bibliotecas */
 #include <WiFi.h>
 #include <ESPmDNS.h>
 #include <DNSServer.h>
@@ -18,19 +22,22 @@
 
 #include "credentials.h"
 
+/* Variaveis de conexão */
 const char* ssid = apSSID;
 const char* password = apPASS;
 const char* myHostname = mDNSHostName;
-
 const byte DNS_PORT = 53;
 
+/* Variaveis de GPIO */
 const int BC [12] = {2, 14, 15, 16, 17, 18, 19, 21, 22, 23, 25, 26};
 bool BC1_status = LOW, BC2_status = LOW, BC3_status = LOW, BC4_status = LOW, BC5_status = LOW, BC6_status = LOW, BC7_status = LOW, BC8_status = LOW, BC9_status = LOW, BC10_status = LOW, BC11_status = LOW, BC12_status = LOW;
 
+/* Objetos WEB e de métodos */
 WebServer server(80);
 DNSServer dnsServer;
 IPAddress apIP(192,168,1,1);
 
+/* Função de execução unica e inicial */
 void setup(void)
 {
     Serial.begin(115200);
@@ -74,8 +81,18 @@ void setup(void)
     MDNS.addService("http", "tcp", 80);
 }
 
+/* Função de execução ccontinua e infinita */
 void loop(void)
 {
   dnsServer.processNextRequest();
   server.handleClient();
 }
+
+/* -------------------------------------------------------- */
+/* Fim */
+
+/*creditos/referências:
+    https://github.com/esp8266/Arduino/tree/master/libraries/DNSServer/examples/CaptivePortalAdvanced
+    https://www.arduino.cc/reference/en/
+    https://github.com/espressif/arduino-esp32/tree/master/libraries/DNSServer/examples/CaptivePortal
+*/

@@ -1,4 +1,10 @@
-void handleRoot() {
+/* ---------------------------------------------------------
+  ETEC Profa. Dra. Doroti Quiomi Kanashiro Toyohara
+
+  Funções principais de inicialização DNS e captive portal
+--------------------------------------------------------- */
+
+void handleRoot(void) {
   if (captivePortal()) {  // If caprive portal redirect instead of displaying the page.
     return;
   }
@@ -97,7 +103,7 @@ void handleRoot() {
   server.send(200, "text/html", Page);
 }
 
-boolean captivePortal() {
+boolean captivePortal(void) {
   if (!isIp(server.hostHeader()) && server.hostHeader() != (String(myHostname) + ".local")) {
     Serial.println("Request redirected to captive portal");
     server.sendHeader("Location", String("http://") + toStringIp(server.client().localIP()), true);
@@ -108,7 +114,7 @@ boolean captivePortal() {
   return false;
 }
 
-void handleNotFound() {
+void handleNotFound(void) {
   if (captivePortal()) {  // If caprive portal redirect instead of displaying the error page.
     return;
   }

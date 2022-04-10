@@ -1,88 +1,94 @@
-void handleRele1() {
+/* ---------------------------------------------------------
+  ETEC Profa. Dra. Doroti Quiomi Kanashiro Toyohara
+
+  Funções de controle das bancadas/reles
+--------------------------------------------------------- */
+
+void handleRele1(void) {
   BC1_status = !BC1_status;
   digitalWrite(BC[0], BC1_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele2() {
+void handleRele2(void) {
   BC2_status = !BC2_status;
   digitalWrite(BC[1], BC2_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele3() {
+void handleRele3(void) {
   BC3_status = !BC3_status;
   digitalWrite(BC[2], BC3_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele4() {
+void handleRele4(void) {
   BC4_status = !BC4_status;
   digitalWrite(BC[3], BC4_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele5() {
+void handleRele5(void) {
   BC5_status = !BC5_status;
   digitalWrite(BC[4], BC5_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele6() {
+void handleRele6(void) {
   BC6_status = !BC6_status;
   digitalWrite(BC[5], BC6_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele7() {
+void handleRele7(void) {
   BC7_status = !BC7_status;
   digitalWrite(BC[6], BC7_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele8() {
+void handleRele8(void) {
   BC8_status = !BC8_status;
   digitalWrite(BC[7], BC8_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele9() {
+void handleRele9(void) {
   BC9_status = !BC9_status;
   digitalWrite(BC[8], BC9_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele10() {
+void handleRele10(void) {
   BC10_status = !BC10_status;
   digitalWrite(BC[9], BC10_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele11() {
+void handleRele11(void) {
   BC11_status = !BC11_status;
   digitalWrite(BC[10], BC11_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-void handleRele12() {
+void handleRele12(void) {
   BC12_status = !BC12_status;
   digitalWrite(BC[11], BC12_status);
             
   server.send(200, "text/html", PageReturn());
 }
 
-String PageReturn() {
+String PageReturn(void) {
   String Page;
   Page += F("<!DOCTYPE html>"
             "<html lang='pt-br'>"
