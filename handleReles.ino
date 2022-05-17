@@ -7,85 +7,85 @@
 void handleRele1(void) {
   BC1_status = !BC1_status;
   digitalWrite(BC[0], BC1_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele1");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele2(void) {
   BC2_status = !BC2_status;
   digitalWrite(BC[1], BC2_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele2");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele3(void) {
   BC3_status = !BC3_status;
   digitalWrite(BC[2], BC3_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele3");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele4(void) {
   BC4_status = !BC4_status;
   digitalWrite(BC[3], BC4_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele4");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele5(void) {
   BC5_status = !BC5_status;
   digitalWrite(BC[4], BC5_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele5");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele6(void) {
   BC6_status = !BC6_status;
   digitalWrite(BC[5], BC6_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele6");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele7(void) {
   BC7_status = !BC7_status;
   digitalWrite(BC[6], BC7_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele7");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele8(void) {
   BC8_status = !BC8_status;
   digitalWrite(BC[7], BC8_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele8");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele9(void) {
   BC9_status = !BC9_status;
   digitalWrite(BC[8], BC9_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele9");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele10(void) {
   BC10_status = !BC10_status;
   digitalWrite(BC[9], BC10_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele10");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele11(void) {
   BC11_status = !BC11_status;
   digitalWrite(BC[10], BC11_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele11");
+  server.send(200, "text/html", indexHTML);
 }
 
 void handleRele12(void) {
   BC12_status = !BC12_status;
   digitalWrite(BC[11], BC12_status);
-            
-  server.send(200, "text/html", PageReturn());
+  Serial.println("Toggle Rele12");
+  server.send(200, "text/html", indexHTML);
 }
 
 String PageReturn(void) {
@@ -176,5 +176,5 @@ String PageReturn(void) {
             "    </div>"
             "</body>"
             "</html>");
-  return Page;
+  return indexHTML;
 }

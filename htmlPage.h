@@ -1,4 +1,5 @@
-<!--
+const char indexHTML[] PROGMEM = R"=====(
+    <!--
     ETEC Profa. Dra. Doroti Quiomi Kanashiro Toyohara
 
     Html de referência para o código.
@@ -237,3 +238,4 @@
 </script>
 
 </html>
+)=====" ;

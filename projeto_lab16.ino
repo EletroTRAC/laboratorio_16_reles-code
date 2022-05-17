@@ -20,6 +20,8 @@
 #include <WiFiClient.h>
 #include <WebServer.h>
 
+#include "htmlPage.h"
+
 #include "credentials.h"
 
 /* Variaveis de conexão */

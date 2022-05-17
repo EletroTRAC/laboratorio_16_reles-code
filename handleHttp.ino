@@ -12,7 +12,7 @@ void handleRoot(void) {
   server.sendHeader("Pragma", "no-cache");
   server.sendHeader("Expires", "-1");
 
-  String Page;
+  /*String Page;
   Page += F("<!DOCTYPE html>"
             "<html lang='pt-br'>"
             "<head>"
@@ -98,9 +98,9 @@ void handleRoot(void) {
             "        </div>"
             "    </div>"
             "</body>"
-            "</html>");
+            "</html>");*/
 
-  server.send(200, "text/html", Page);
+  server.send(200, "text/html", indexHTML);
 }
 
 boolean captivePortal(void) {
