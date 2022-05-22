@@ -1,3 +1,3 @@
-const char* apSSID = "Bosta no ventilador";
-const char* apPASS = "barbosa2022";
-const char* mDNSHostName = "eletroporamor";
+const char* apSSID = "PUT_YOUR_WIFI_SSID_HERE";
+const char* apPASS = "PUT_YOUR_WIFI_PASSWORD_HERE";
+const char* mDNSHostName = "PUT_SOME_HOSTName_HERE";
